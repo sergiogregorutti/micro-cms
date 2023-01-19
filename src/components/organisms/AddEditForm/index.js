@@ -1,8 +1,10 @@
 import React, {useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {Link, useNavigate} from 'react-router-dom';
-import usePost from '../utils/usePost';
+import usePost from '../../utils/usePost';
 import {v4 as uuid} from 'uuid';
+
+import './styles.scss';
 
 function AddEditForm({id}) {
   const navigate = useNavigate();

@@ -1,8 +1,10 @@
-import PostTitle from '../atoms/PostTitle';
-import PostImage from '../atoms/PostImage';
-import PostDescription from '../atoms/PostDescription';
-import Link from '../atoms/Link';
-import usePost from '../utils/usePost';
+import PostTitle from '../../atoms/PostTitle';
+import PostImage from '../../atoms/PostImage';
+import PostDescription from '../../atoms/PostDescription';
+import Link from '../../atoms/Link';
+import usePost from '../../utils/usePost';
+
+import './styles.scss';
 
 function Post({id}) {
   const post = usePost(id);

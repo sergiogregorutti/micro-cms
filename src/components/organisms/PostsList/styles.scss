@@ -1,0 +1,41 @@
+.posts-list {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+    .post-item {
+      margin-bottom: 15px;
+
+      h2 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+      }
+
+      img {
+        float: left;
+        width: 70px;
+        margin-right: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+
+    &:hover {
+      .post-item h2 {
+        text-decoration: underline;
+      }
+    }
+  }
+}

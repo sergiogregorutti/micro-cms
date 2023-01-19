@@ -6,7 +6,6 @@ import Blog from './components/pages/Blog';
 import PostDetail from './components/pages/PostDetail';
 import CreatePost from './components/pages/CreatePost';
 import EditPost from './components/pages/EditPost';
-import './App.css';
 
 function App() {
   return (

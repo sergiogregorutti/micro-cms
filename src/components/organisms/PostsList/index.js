@@ -1,6 +1,8 @@
 import React from 'react';
-import PostItem from '../molecules/PostItem';
+import PostItem from '../../molecules/PostItem';
 import {Link} from 'react-router-dom';
+
+import './styles.scss';
 
 function PostsList({posts}) {
   return (

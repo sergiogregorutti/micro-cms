@@ -1,0 +1,40 @@
+.create-edit-post {
+  padding: 15px;
+
+  h1 {
+    margin-left: 0;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 300px;
+      padding: 5px;
+    }
+  }
+
+  button {
+    border: none;
+    background: orange;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+
+  a {
+    margin-left: 20px;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
