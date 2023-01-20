@@ -26,6 +26,10 @@
     text-transform: uppercase;
     font-weight: bold;
     padding: 10px 15px;
+
+    &:disabled {
+      opacity: 0.3;
+    }
   }
 
   a {

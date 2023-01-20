@@ -10,7 +10,7 @@ function AddEditForm({id}) {
   const navigate = useNavigate();
   const isAddMode = !id;
 
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: { isValid } } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
     console.log('onSubmit', data);
@@ -45,6 +45,7 @@ function AddEditForm({id}) {
 
   useEffect(() => {
     reset(post);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -54,7 +55,7 @@ function AddEditForm({id}) {
         <div>
           <div className="form-group">
             <label>Title</label>
-            <input defaultValue={post.title} {...register("title")} />
+            <input defaultValue={post.title} {...register("title", {required: true})} />
           </div>
           <div className="form-group">
             <label>Image</label>
@@ -62,11 +63,11 @@ function AddEditForm({id}) {
           </div>
           <div className="form-group">
             <label>Description</label>
-            <textarea defaultValue={post.description} {...register("description")} rows="5"></textarea>
+            <textarea defaultValue={post.description} {...register("description", {required: true})} rows="5"></textarea>
           </div>
         </div>
         <div>
-          <button type="submit">Save</button>
+          <button type="submit" disabled={!isValid}>Save</button>
           <Link to={'/blog'}>Cancel</Link>
         </div>
       </form>}
