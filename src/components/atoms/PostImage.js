@@ -1,8 +1,8 @@
 import React from 'react';
 
-function PostImage({image}) {
+function PostImage({image, title}) {
   return (
-    <img src={image} alt="Title" />
+    <img src={image} alt={title} />
   )
 }
 

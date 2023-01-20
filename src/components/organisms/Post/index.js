@@ -15,7 +15,7 @@ function Post({id}) {
       &nbsp;|&nbsp;
       <Link link={`/blog/posts/${post.id}/edit`} text="Edit Post" />
       <PostTitle title={post.title} />
-      {post.image !== '' && <PostImage image={post.image} />}
+      {post.image !== '' && <PostImage image={post.image} title={post.title} />}
       <PostDescription description={post.description} />
     </div>
   );
